@@ -8,9 +8,9 @@ var getheaders = {
 };
 
 var optionsget = {
-    host : 'https://free-nba.p.rapidapi.com/players/%7Bid%7D',
+    host : 'https://free-nba.p.rapidapi.com',
     port :80,
-    path : '/AllPlayer/',
+    path : '/players/%7Bid%7D',
     headers : getheaders,
     method : 'GET'
 };
