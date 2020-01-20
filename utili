@@ -1,3 +1,28 @@
 https://stackoverflow.com/questions/26380021/get-call-with-node-js-with-headers
 
 http://rapidapi.com/theapiguy/api/free-nba/endpoints
+
+/*var optionsget = {
+    host : 'https://free-nba.p.rapidapi.com',
+    port :80,
+    path : '/players/%7Bid%7D',
+    headers : getheaders,
+    method : 'GET'
+};
+
+var reqGet = http.request(optionsget, function(res) {
+    console.log("statusCode: ", res.statusCode);
+  console.log("headers: ", res.headers);
+
+      res.on('data', function(d) {
+        console.info('GET result:\n');
+        process.stdout.write(d);
+        console.info('\n\nCall completed');
+    });
+
+});
+
+reqGet.end();
+reqGet.on('error', function(e) {
+    console.error(e);
+});*/
