@@ -1,20 +1,16 @@
 {
   "name": "websitenba",
-  "version": "1.0.0",
-  "main": "start.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon start.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.2"
+    "start": "node ./bin/www"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "request": "^2.88.0",
-    "unirest": "^0.6.0"
-  },
-  "description": ""
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pug": "2.0.0-beta11"
+  }
 }

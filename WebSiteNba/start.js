@@ -1,29 +1,23 @@
 var http = require('http');
 var express = require('express');
+var router = express.Router();
 var app = express();
 
-var unirest = require("unirest");
+var playersRouter = require('./routes/players');
+var teamsRouter = require('./routes/teams');
 
-var req = unirest("GET", "https://free-nba.p.rapidapi.com/players");
+var app = express();
+app.set('view engine', 'pug');
 
-req.query({
-	"page": "0",
-	"per_page": "25"
+app.get('/', function (req, res) {
+ res.render('index');  
 });
-
-req.headers({
-	"x-rapidapi-host": "free-nba.p.rapidapi.com",
-	"x-rapidapi-key": "c86fdafd32msh19bc6d58a4432cfp1e56c2jsn7f2d69f42040"
-});
-
-req.end(function (res) {
-	if (res.error) throw new Error(res.error);
-
-	console.log(res.body);
-});
-
-
 
 app.listen(3000, function(){
-    console.log('Example app listening port 3000!|PLAYERS|');
+    console.log('Example app listening port 3000!');
 });
+
+app.use('/players', playersRouter);
+app.use('/teams', teamsRouter);
+
+module.exports = app;
