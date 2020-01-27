@@ -22,8 +22,6 @@ req.end(function (res) {
 	console.log(res.body);
 });
 
-app.listen(3000, function(){
-    console.log('Example app listening port 3000! |TEAMS|');
-});
 
-module.exports = router;
+
+module.exports = app;
